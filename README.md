@@ -27,26 +27,27 @@ li{地铁编号}s{站点编号}
 eg：http://www.domain.com/ditiefang/li123s456
    二手房安地铁筛选-地铁线路ID为123-站点ID为456 
 ### 3）tags
-s:售价
+s:售价 
 a:面积  
 f:房型  
 g:地铁房  
-v:随时看房
-l:房本满5年
-k:降价
-bs:最低价格
+v:随时看房 
+l:房本满5年 
+k:降价 
+bs:最低价格 
 es:最高价格  
-ba:最小面积
-ea:最大面积  
+ba:最小面积 
+ea:最大面积 
 pg:分页  
-rs:搜索关键词
+rs:搜索关键词 
 
-列表选项卡和排序
-热门房源：PA 
-最新发布：P1
-房屋总价 (P3: ASC, P4: DESC)
-房屋单价 (P5: ASC, P6: DESC)
-房源面积 (P7: ASC, P8: DESC)
+列表选项卡和排序 
+热门房源：PA  
+最新发布：P1 
+房屋总价 (P3: ASC, P4: DESC) 
+房屋单价 (P5: ASC, P6: DESC) 
+房源面积 (P7: ASC, P8: DESC) 
+ 
+其他请参考 
+http://statictest.koofang.com/ershoufang/pg1 
 
-其他请参考
-http://statictest.koofang.com/ershoufang/pg1
