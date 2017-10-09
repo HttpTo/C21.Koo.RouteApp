@@ -1,5 +1,5 @@
 
-#列表页规则 
+# 列表页规则 
 
 ## 1.路径规则
 http://www.domain.com/{zufang||ershoufang}/{行政区拼音||行政区拼音-商圈拼音}/tags 
