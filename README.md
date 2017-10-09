@@ -43,9 +43,9 @@ pg:分页
 rs:搜索关键词             
 列表选项卡和排序             
 热门房源：PA  
-最新发布：P1   
-房屋总价：(P3: ASC, P4: DESC)  
-房屋单价：(P5: ASC, P6: DESC)  
+最新发布：P1    
+房屋总价：(P3: ASC, P4: DESC)    
+房屋单价：(P5: ASC, P6: DESC)    
 房源面积：(P7: ASC, P8: DESC) 
 
 其他请参考:http://statictest.koofang.com/ershoufang/pg1 
