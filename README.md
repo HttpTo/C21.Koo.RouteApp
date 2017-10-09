@@ -1,98 +1,52 @@
-C21.Koo.RouteApp
+#列表页规则 
 
-### 0.整理链家列表页规则
-http://xxx.com/{zufang||ershoufang}/{行政区拼音||行政区拼音-商圈拼音}
-http://xxx.com/{ditiefang||ditiezufang}/li{地铁编号}s{站点编号}
-li:地铁编号
-s:站点编号
-
-
-
-条件 + 关键词
-仅关键词
-仅条件
-无任何条件
-
-
-http://localhost:36552/zufang/chaoyang-guomao/s1s2s3a1s2s3bs50000es90000pg1rs张三  
-route:zufang/{district}-{tradingarea}/{condition}rs{keyword}
-
-http://localhost:36552/zufang/chaoyang-guomao/rs张三  
-route:zufang/{district}-{tradingarea}/rs{keyword}
-
-http://localhost:36552/zufang/chaoyang-guomao/s1s2s3a1s2s3bs50000es90000pg1  
-route:/zufang/{district}-{tradingarea}/{condition}
-
-http://localhost:36552/zufang/chaoyang-guomao/  
-route:zufang/{district}-{tradingarea}/
-
-http://localhost:36552/zufang/chaoyang/s1s2s3bs500es9999pg1rs张三  
-route:zufang/{district}/{condition}rs{keyword}
-
-http://localhost:36552/zufang/chaoyang/rs张三  
-route:zufang/{district}/rs{keyword}
-
-http://localhost:36552/zufang/chaoyang/s1s2s3bs500es9999pg1a1a2  
-route:zufang/{district}/{condition}
-
-http://localhost:36552/zufang/a1a2a3s1s2s3bs500es900ba500ea5000pg1rs张三  
-route:zufang/{condition}rs{keyword}
-
-http://localhost:36552/zufang/rs张三  
-route:zufang/rs{keyword}
-
-http://localhost:36552/zufang/a1a2a3s1s2s3bs500es900ba500ea5000pg1  
-route:zufang/{condition}/
-
-http://localhost:36552/zufang/chaoyang/  
-route:zufang/{district}/  
-
-a1a2a3a4a5a6a7a8a9c1c2c3c4d0d1d2d3e1f1f2f3f4f5f6g1h1j1j2j3j4j5j6j7k1l1o0o1o2o3o4o5o6o7o8o9r1r2r3r4r5r6r7r8s1s2s3s4s5s6s7s8t1t2u1u2u3u4v0y1y2y3y4y5y6z2z3z4z5z6pg2ba30ea80bs30000es90000rs张三
-
-http://xxx.com/zufang/  
-301 Redirect: /zufang/pg1  
-
-
-/p{1}p{N}a{1}a{N}l{1}l{N}t{1}t{N}y{N}sf{N}lc{N}f{N}de{N}bp{number}ep{number}ba{number}ea{number}co{tabIndex|sort_direction}pg{pageIndex}rs{keyword}/
-p:价格  
+## 1.路径规则
+http://www.domain.com/{zufang||ershoufang}/{行政区拼音||行政区拼音-商圈拼音}/tags
+http://www.domain.com/{ditiefang||ditiezufang}/li{地铁编号}s{站点编号}/tags
+## 2.参数解释 
+### 1）
+{ershoufang}-二手房按区域筛选
+eg：http://www.domain.com/ershoufang/ 
+{zufang}-租房按区域筛选 
+eg：http://www.domain.com/zufang/ 
+{ditiefang}-二手房安地铁筛选
+eg：http://www.domain.com/ditiefang/ 
+{ditiezufang}-租房安地铁筛选
+eg：http://www.domain.com/ditiezufang/ 
+### 2）
+{行政区拼音} 
+eg：http://www.domain.com/ershoufang/CYQ 
+    二手房按区域筛选-朝阳区 
+{行政区拼音-商圈拼音} 
+eg：http://www.domain.com/ershoufang/CYQ-GM 
+    二手房按区域筛选-朝阳区-国贸 
+li{地铁编号} 
+eg：http://www.domain.com/ditiefang/li123 
+   二手房安地铁筛选-地铁线路ID为123 
+li{地铁编号}s{站点编号} 
+eg：http://www.domain.com/ditiefang/li123s456
+   二手房安地铁筛选-地铁线路ID为123-站点ID为456 
+### 3）tags
+s:售价
 a:面积  
-l:房型  
-t:标签  
-y:楼龄
-sf:房屋类型  
-lc:楼层
-f:朝向  
-de:装修  
-bp:最低价格
-ep:最高价格  
+f:房型  
+g:地铁房  
+v:随时看房
+l:房本满5年
+k:降价
+bs:最低价格
+es:最高价格  
 ba:最小面积
 ea:最大面积  
-co:选项卡和排序方向[1.最新房源，2.房源租金，3.房源面积，4.临近地铁]  
 pg:分页  
-keyword:搜索关键词
+rs:搜索关键词
 
-### 1.目录
-/ershoufang/
+列表选项卡和排序
+热门房源：PA 
+最新发布：P1
+房屋总价 (P3: ASC, P4: DESC)
+房屋单价 (P5: ASC, P6: DESC)
+房源面积 (P7: ASC, P8: DESC)
 
-### 2.分页参数
-pg1,pg2,pg3
-
-### 3.js和css路径
-都用绝对路径
-
-### 4.左侧工具栏
-不静态化
-
-### 5.绑定模板(列表+分页)
-
-### 6.查询列表数据
-
-### 7.列表选项卡和排序
-默认排序：""
-最新房源、最新发布：P1
-房屋总价 (P2: ASC, P3: DESC)
-房屋单价 (P4: ASC, P5: DESC)
-房源面积 (P6: ASC, P7: DESC)
-房源租金 (P8: ASC, P9: DESC)
-热门房源：PA
-临近地铁：PB
+其他请参考
+http://statictest.koofang.com/ershoufang/pg1
