@@ -6,13 +6,13 @@ http://www.domain.com/{zufang||ershoufang}/{行政区拼音||行政区拼音-商
 http://www.domain.com/{ditiefang||ditiezufang}/li{地铁编号}s{站点编号}/tags 
 ## 2.参数解释 
 ### 1）
-{ershoufang}-二手房按区域筛选   
+{ershoufang}：二手房按区域筛选   
 eg：http://www.domain.com/ershoufang/ 
-{zufang}-租房按区域筛选   
+{zufang}：租房按区域筛选   
 eg：http://www.domain.com/zufang/    
-{ditiefang}-二手房安地铁筛选  
+{ditiefang}：二手房安地铁筛选  
 eg：http://www.domain.com/ditiefang/  
-{ditiezufang}-租房安地铁筛选  
+{ditiezufang}：租房安地铁筛选  
 eg：http://www.domain.com/ditiezufang/  
 ### 2）
 {行政区拼音} 
@@ -44,8 +44,8 @@ rs:搜索关键词
 列表选项卡和排序             
 热门房源：PA  
 最新发布：P1   
-房屋总价 (P3: ASC, P4: DESC)  
-房屋单价 (P5: ASC, P6: DESC)  
-房源面积 (P7: ASC, P8: DESC) 
+房屋总价：(P3: ASC, P4: DESC)  
+房屋单价：(P5: ASC, P6: DESC)  
+房源面积：(P7: ASC, P8: DESC) 
 
 其他请参考:http://statictest.koofang.com/ershoufang/pg1 
